@@ -13,8 +13,8 @@ pip-delete-this-directory.txt
 
 # Data and models
 data/
-models/*.pth
-results/
+#models/*.pth
+#results/
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -36,7 +36,7 @@ OLD/
 Thumbs.db
 
 # Docker
-.dockerignore
+#.dockerignore
 
 # Logs
 *.log

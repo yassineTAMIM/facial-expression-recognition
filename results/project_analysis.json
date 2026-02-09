@@ -1,0 +1,147 @@
+{
+  "dataset": {
+    "distribution": {
+      "train": {
+        "angry": 3196,
+        "disgust": 349,
+        "fear": 3278,
+        "happy": 5772,
+        "sad": 3864,
+        "surprise": 2537,
+        "neutral": 3972
+      },
+      "val": {
+        "angry": 799,
+        "disgust": 87,
+        "fear": 819,
+        "happy": 1443,
+        "sad": 966,
+        "surprise": 634,
+        "neutral": 993
+      },
+      "test": {
+        "angry": 958,
+        "disgust": 111,
+        "fear": 1024,
+        "happy": 1774,
+        "sad": 1247,
+        "surprise": 831,
+        "neutral": 1233
+      }
+    },
+    "class_statistics": {
+      "angry": {
+        "total": 4953,
+        "train": 3196,
+        "val": 799,
+        "test": 958,
+        "train_pct": 64.5,
+        "val_pct": 16.1,
+        "test_pct": 19.3
+      },
+      "disgust": {
+        "total": 547,
+        "train": 349,
+        "val": 87,
+        "test": 111,
+        "train_pct": 63.8,
+        "val_pct": 15.9,
+        "test_pct": 20.3
+      },
+      "fear": {
+        "total": 5121,
+        "train": 3278,
+        "val": 819,
+        "test": 1024,
+        "train_pct": 64.0,
+        "val_pct": 16.0,
+        "test_pct": 20.0
+      },
+      "happy": {
+        "total": 8989,
+        "train": 5772,
+        "val": 1443,
+        "test": 1774,
+        "train_pct": 64.2,
+        "val_pct": 16.1,
+        "test_pct": 19.7
+      },
+      "sad": {
+        "total": 6077,
+        "train": 3864,
+        "val": 966,
+        "test": 1247,
+        "train_pct": 63.6,
+        "val_pct": 15.9,
+        "test_pct": 20.5
+      },
+      "surprise": {
+        "total": 4002,
+        "train": 2537,
+        "val": 634,
+        "test": 831,
+        "train_pct": 63.4,
+        "val_pct": 15.8,
+        "test_pct": 20.8
+      },
+      "neutral": {
+        "total": 6198,
+        "train": 3972,
+        "val": 993,
+        "test": 1233,
+        "train_pct": 64.1,
+        "val_pct": 16.0,
+        "test_pct": 19.9
+      }
+    },
+    "total_images": 35887
+  },
+  "model": {
+    "total_parameters": 2456970,
+    "parameters_by_layer": {
+      "Convolutional": 92672,
+      "Batch Normalization": 899,
+      "Fully Connected": 2363399
+    },
+    "model_size_mb": 28.13,
+    "trainable_parameters": 2456970
+  },
+  "training": {
+    "best_val_accuracy": 61.82,
+    "test_accuracy": 61.77,
+    "training_time_minutes": 66.28,
+    "training_time_hours": 1.1,
+    "total_epochs": 40,
+    "batch_size": 32,
+    "learning_rate": 0.0005,
+    "images_per_epoch": 22968,
+    "total_images_processed": 918720,
+    "images_per_second": 231.03,
+    "time_per_epoch_minutes": 1.66
+  },
+  "docker": {
+    "dockerfile_lines": 31,
+    "dockerfile_instructions": 15,
+    "total_dependencies": 10,
+    "services_defined": 1,
+    "image_size_gb": 2.4,
+    "model_size_mb": 28.14
+  },
+  "code": {
+    "python_files": 11,
+    "total_lines": 1985,
+    "files": {
+      "dataset.py": 142,
+      "model.py": 71,
+      "train.py": 248,
+      "utils.py": 180,
+      "analyze_project.py": 434,
+      "api.py": 183,
+      "compare_training.py": 178,
+      "generate_report.py": 42,
+      "setup_dataset.py": 202,
+      "test_api.py": 119,
+      "test_webcam.py": 186
+    }
+  }
+}

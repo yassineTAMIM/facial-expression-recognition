@@ -1,0 +1,15 @@
+{
+    "best_val_accuracy": 61.8184985194217,
+    "test_accuracy": 61.77208135971023,
+    "training_time_minutes": 66.27800116141637,
+    "total_epochs": 40,
+    "total_parameters": 2456519,
+    "config": {
+        "data_dir": "data",
+        "batch_size": 32,
+        "num_epochs": 40,
+        "learning_rate": 0.0005,
+        "num_workers": 2,
+        "device": "cpu"
+    }
+}
