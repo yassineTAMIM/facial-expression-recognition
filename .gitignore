@@ -25,6 +25,7 @@ results/
 
 # IDE
 .vscode/
+OLD/
 .idea/
 *.swp
 *.swo

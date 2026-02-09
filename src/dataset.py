@@ -60,8 +60,9 @@ def get_transforms(split='train'):
         return transforms.Compose([
             transforms.Resize((48, 48)),
             transforms.RandomHorizontalFlip(p=0.5),
-            transforms.RandomRotation(10),
-            transforms.ColorJitter(brightness=0.2, contrast=0.2),
+            transforms.RandomRotation(15),                    # Changed from 10
+            transforms.RandomAffine(0, translate=(0.1, 0.1)), # Added
+            transforms.ColorJitter(brightness=0.3, contrast=0.3),  # Increased from 0.2
             transforms.ToTensor(),
             transforms.Normalize(mean=[0.5], std=[0.5])
         ])

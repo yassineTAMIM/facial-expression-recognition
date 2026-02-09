@@ -93,13 +93,13 @@ def main():
     
     # Configuration
     config = {
-        'data_dir': 'data',
-        'batch_size': 64,
-        'num_epochs': 25,
-        'learning_rate': 0.001,
-        'num_workers': 2,
-        'device': 'cuda' if torch.cuda.is_available() else 'cpu'
-    }
+    'data_dir': 'data',
+    'batch_size': 32,              # Changed from 64
+    'num_epochs': 40,              # Changed from 25
+    'learning_rate': 0.0005,       # Changed from 0.001
+    'num_workers': 2,
+    'device': 'cuda' if torch.cuda.is_available() else 'cpu'
+}
     
     print("=" * 60)
     print("FACIAL EXPRESSION RECOGNITION - TRAINING")
@@ -136,11 +136,11 @@ def main():
     
     # Loss and optimizer
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(model.parameters(), lr=config['learning_rate'])
-    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', patience=3, factor=0.5)
+    optimizer = optim.Adam(model.parameters(), lr=config['learning_rate'], weight_decay=1e-4)  # Added weight decay
+    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', patience=2, factor=0.3)  # More aggressive
     
     # Early stopping
-    early_stopping = EarlyStopping(patience=5, mode='min')
+    early_stopping = EarlyStopping(patience=7, mode='min')  # Changed from 5
     
     # Training history
     history = {
